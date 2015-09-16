@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>leaflet-tilelayer-jsonld</title>
+<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="//frogcat.github.io/leaflet-tilelayer-jsonld/leaflet-tilelayer-jsonld.js"></script>
+<script type="application/ld+json" id="tile">
+{
+	"@context" : "http://frogcat.github.io/leaflet-tilelayer-jsonld/context.jsonld",
+	"@type" : "cc:Work",
+	"@id" : "http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png",
+	"rdfs:label" : "歴史的農業景観閲覧システム",
+	"rdfs:description" : "明治時代初期に作成された「第一軍管区地方2万分1迅速測図原図」および「五千分一東京図測量原図」のタイル画像",
+	"cc:license" : "http://creativecommons.org/licenses/by/2.1/jp/",
+	"cc:attributionName" : "歴史的農業環境閲覧システム(NIAES)",
+	"cc:attributionURL" : "http://habs.dc.affrc.go.jp/",
+	"cc:useGuidelines" : "http://habs.dc.affrc.go.jp/habs_faq.html",
+	"minZoom" : 8,
+	"maxZoom" : 16
+}
+</script>
+</head>
+<body style="width: 100%; height: 100%; overflow: hidden;">
+	<div id="map" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;"></div>
+	<script>
+		L.map("map", {
+			zoom : 16,
+			minZoom : 10,
+			center : [ 36.09894, 139.96672 ],
+			layers : [ L.tileLayer.jsonld("tile") ]
+		});
+	</script>
+</body>
+</html>
