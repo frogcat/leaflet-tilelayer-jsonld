@@ -10,6 +10,25 @@ JSON-LD context and tools for leaflet-tilelayer
 
 ## for GIS Developer
 
+### プラグイン
+
+<http://frogcat.github.io/leaflet-tilelayer-jsonld/leaflet-tilelayer-jsonld.js">
+
+L.tileLayer.jsonld 関数を定義します。
+element id で特定される HTML 要素の中身を JSON-LD としてパースし、
+その内容を元に TileLayer を生成して返します。
+
+    var tilelayer = L.tileLayer.jsonld("element id");
+
+HTML 要素は特に区別はしませんが、以下のように JSON-LD を埋め込むための script 要素が推奨されます。
+
+
+    <script type="application/ld+json" id="tile"> ... </script>
+
+
+
+
+
 ### デモ
 
 <http://frogcat.github.io/leaflet-tilelayer-jsonld/example.html>
