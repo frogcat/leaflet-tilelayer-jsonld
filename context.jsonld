@@ -1,0 +1,22 @@
+{
+	"@context" : {
+		"@vocab" : "http://example.org/",
+		"ex" : "http://example.org/",
+		"dc" : "http://purl.org/dc/terms/",
+		"cc" : "http://creativecommons.org/ns#",
+		"rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+		"rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"cc:license" : {
+			"@type" : "@id"
+		},
+		"cc:morePermissions" : {
+			"@type" : "@id"
+		},
+		"cc:attributionURL" : {
+			"@type" : "@id"
+		},
+		"cc:useGuidelines" : {
+			"@type" : "@id"
+		}
+	}
+}
